@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello,{{name}}</h1> <!--插值语法-->
+        <hr/>
+        <a v-bind:href="url">百度一下1</a>  <!--指令语法-->
+        <a :href="url">百度一下2</a>  <!--指令语法-->   
+    </div>
+    <div id="bind">
+        单向数据绑定：<input type="text" v-bind:value="name"><br> <!--简写直接：-->
+        双向数据绑定：<input type="text" v-model:value="name">   <!--v-model只能放在表单类，对value绑定。简写为v-model:"##"-->
+    </div>
+    <script>
+        Vue.config.productionTip = false //阻止vue启动时生产提示
+
+        const vm = new Vue({  //Vue实例中的所有属性都可以直接使用
+            el:'#root', //el指定当前Vue实例为哪个容器服务，值通常为css选择器字符串  第一种方式
+            /*data:{  //data中用于存储数据，由el指定的容器使用 第一种方式
+                name:'孟德轩123',
+                url:'http://www.baidu.com'
+            }*/
+
+            data:function(){    //简写：data(){}   vue管理的函数，千万别用箭头函数
+                return{
+                    name:'孟德轩12'
+                }
+            }
+
+        })
+
+        x.$mount('#root')   //第二种方式绑定vue与容器
+
+        new Vue({                       
+            el:'#bind',
+            data:{
+                name:1214520
+            }
+        })
+
+    </script>
+
+</body>
+</html>

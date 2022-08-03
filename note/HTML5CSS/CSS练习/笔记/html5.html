@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!---->
+<html lang="en">
+<head>  <!--the configs of the page are in the module head-->
+    <!--the essence of the meta is attribute,key-value -->
+    <meta charset="UTF-8">    <!--set the code of the page -->       
+    <meta name="author" content="mdx"/>  <!-- it's key-value -->
+    <meta name="'keywords" content ="工作"/>  <!--the key word of the page-->
+    <meta name="description" content = '工作机会展示页'/> <!--the description of the page-->
+    <meta http-equiv="refresh" content="10000;https:www.baidu.com"/> <!--refresh the page,open baidu after 3 seconds-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--the use of link is linking the outer resources,like css-->
+    <link rel="shorticon" href="https://www.baidu.com/favicon/ico"type='image/x-icon'/> <!--the icon of the page-->
+    <link rel="stylesheet" href="./mystyle.css"> <!--引入外联样式表-->
+    <!--内部样式表-->
+    <style type="text/css"> 
+        h1{
+            color:blueviolet;
+        }
+    </style> 
+    <title>Document</title>   <!--默认显示页面的路径 页面的标题-->
+</head>
+
+<body>              
+    <!--结合布局-->
+    <div></div> <!--容器，块级元素，占整个宽度-->
+    <span></span><!--行内元素，内容多大，span包裹的区域就多大-->
+
+    <!--文本效果集合-->
+    <h1>标题萨达阿萨德撒1</h1>     <!--h1 - h6是标题标签，自动换行 -->
+    <h2>标题2</h2>
+    <h3>标题3</h3>
+
+    <hr width="300px",align="left"/>   <!--横线标签,width是宽度，align设置对齐--> 
+    <hr width="30%",align="center"/>   <!--浏览器宽度的30%，align设置对齐--> 
+
+    <p>&nbsp;&emsp;&lt;&gt;</p> <!--&nbsp;实体字符，代表半个空格.&emsp;代表一个空格,&lt;&gt;代表<>-->
+    <p>这是一段话</p>  <!--段落中 文字随着浏览器宽度自动换行-->
+
+    <b><i><u><del>加粗倾<br/>  <!--换行-->斜下划线</del></u></i></b>  <!--加粗 倾斜 下划线 删除-->
+    <pre>
+        完全按照编辑器的样式   <!--预编译-->
+                展示
+    </pre>
+    <font color ='green' size="12" face="宋体">字体</font>  <!--#397655-->
+
+    <!--多媒体标签 src代表位置，可以引入本地的，也可以引入外部的-->
+    <!--图片，替换元素，一般宽高只设置一个，title表示图片加载时候的提示语-->
+    <img src="" width='300px'/>
+    <!--音频 controls可以让用户控制，Autoplay是否让自动播放 loop循环播放-->
+    <audio src="" controls autoplay loop></audio> 
+    <embed src="" type=""> <!--必须指定宽高，非常不好用。如果为了稳定，type必须指定-->
+    <!--视频-->
+    <video src="" controls></video>
+    <embed src="">
+
+    <!--超链接标签，实现页面跳转的内容-->
+    <a href="www.baidu.coms" target="_blank">百度网络</a>   <!--在新页面打开用_blank，在当前页面打开_self-->
+    <!--设置锚点-->
+    <a href="#2F"></a>  <!--#+标签name实现跳转-->
+    <a name="2F"></a>
+
+    <!--列表标签-->
+    <ul type="circle"> <!--无序列表，type可以设置列表前图表的样式-->
+        <li>起床</li>
+        <li>刷牙</li>
+        <li>洗脸</li>
+    </ul>
+    <ol type="a" start="3">   <!--有序列表,start设置列表的开始号-->  
+        <li>html5</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ol>
+
+    <!--表格 在页面布局很规整的时候，可能利用的就是表格-->
+    <table border="1px" cellspacing="0px" width="500px" height="300px" bgcolor='darkgreen' background="">    
+        <!--表格标签 默认没有边框 border是边框 cellspacing设置边框的空隙，background设置背景图片-->
+        <thead>   <!--表格 头部行标签-->  
+            <tr>
+                <th>学号</th>  <!--列标签 -->
+                <th>姓名</th> <!--th代表表头，默认加粗居中-->
+                <th>年纪</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1001</td>
+                <td align="center">丽丽</td>
+                <td>19</td>
+                <td rowspan="2">90.5</td>    <!--表格行合并合成一个格-->
+            </tr>
+            <tr>
+                <td colspan="2">瓦瓦</td>  <!--列合并成一个格-->
+                <td>20</td>    
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>兔兔</td>
+                <td>22</td>    
+            </tr>
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+
+    <!--内嵌框架 在网页中嵌入一个网页显示。问题是seo没有好处，爬虫不爬，一般不用-->
+    <iframe src="" frameborder="0">
+    </iframe>
+
+    <!--form表单 进行数据采集作用 把一大把有效数据一次性传过去-->
+    <form action="url" method="get" name="myform"><!--action为提交的url，get代表GETorPOST,name代表表单名-->
+        <!--input文本栏 根据type不同效果不同 有了name才可以采集数据，提交时以key-value的方式拼起来 value代表默认文本，readonly,disabled-->
+            账号：<input type="text" name="username" value="孟德轩" placeholder="这是默认提示语"><br>
+            密码：<input type="password" name="pwd"><br>
+            email: <input type="email" name="email">  <!--代替了邮箱的正则表达式-->
+            url: <input type="url" name="url" >  <!--代替了网址的正则-->
+            颜色：<input type="color" name="color"> <!--录入颜色-->
+            数字： <input type="number" name="num" min="1" max="30" step="3"> <!--录入数字-->
+            范围：<input type="range" name="range" step="1"> <!--录入拖拽-->
+            日期： <input type="date" name="date"> <!--日期-->
+        <hr>
+        <!--单元按钮 多选按钮-->
+            <input type="radio" name="gender" value="1">男 <!--一组单选按钮，必须用name来控制，让他们在一个分组中，然后在一个分组中只能选一个-->
+            <input type="radio" name="gender" value="2">女 <!--不同选项的value值不同-->
+
+            <input type="checkbox" name="1" value="java">老婆1
+            <input type="checkbox" name="1" value="sql">老婆2
+            <input type="checkbox" name="1" value="python">老婆3 <!--多个选项拼接时，中间用&链接-->
+
+        <input type="file"> <!--提交文件-->
+
+        <input type="hidden" name="hidden" value ='123123'>  <!--提交时提交隐藏键值对-->
+        
+        <input type="button" value="普通按钮">  <!--没有啥用，一般和js一起用-->
+
+        <input type="reset"> <!--将页面恢复到最初状态-->
+
+        <select name="下拉" multiple="true" > <!--multiple多选-->
+            <option value="天津市">天津</option>
+            <option value="北京市" selected="true">北京</option> <!--默认选中-->
+            <option value="南京市">南京</option>
+        </select>
+
+        <textarea name="selfintroduce" cols="30" rows="10">
+        </textarea>
+
+        <label for="unname">用户名</label><input type="text" id="unname">  <!--想要获得焦点的标签上加上-->
+
+        <input type="submit" value="提交啦" name="summitbtn">
+    </form>
+</body>
+    <!--框架集合 和body是并列概念，不要把框架放入body中，见视屏-->
+    <frameset>
+
+    </frameset>
+</html>
+
+
+
+

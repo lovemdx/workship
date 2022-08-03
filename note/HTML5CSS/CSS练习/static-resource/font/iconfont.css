@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3551507 */
+  src: url('iconfont.woff2?t=1658924344565') format('woff2'),
+       url('iconfont.woff?t=1658924344565') format('woff'),
+       url('iconfont.ttf?t=1658924344565') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Calendar:before {
+  content: "\e60f";
+}
+
+.icon-Chevron-Right:before {
+  content: "\e610";
+}
+
+.icon-More:before {
+  content: "\e611";
+}
+
+.icon-Chevron-Left:before {
+  content: "\e612";
+}
+

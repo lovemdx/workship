@@ -1,0 +1,37 @@
+{
+  "id": "3551507",
+  "name": "myDemo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "自己用",
+  "glyphs": [
+    {
+      "icon_id": "30175719",
+      "name": "Calendar",
+      "font_class": "Calendar",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "30175727",
+      "name": "Chevron-Right",
+      "font_class": "Chevron-Right",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "30175733",
+      "name": "More",
+      "font_class": "More",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "30175743",
+      "name": "Chevron-Left",
+      "font_class": "Chevron-Left",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}

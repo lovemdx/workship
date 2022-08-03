@@ -1,0 +1,17 @@
+div{
+    width: 100px;
+    height:100px;
+}
+
+.box1{
+    background-color: blue;
+}
+.box2{
+    background-color: green;
+    position:absolute;
+    left:10px;
+}
+.box3{
+    background-color: yellow;
+    margin-top: 10px;
+}

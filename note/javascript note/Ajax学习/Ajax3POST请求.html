@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax POST请求</title>
+    <style>
+        #result{
+            width:200px;
+            height:200px;
+            border:solid 5px #90b
+        }
+    </style>
+</head>
+<body>
+    <button>点击向后台要数据</button>
+    <div id="result"></div>  
+
+    <script>
+        const btn = document.getElementsByTagName('button')[0];
+       
+        btn.onclick = function(){
+            var username = 'mdx123';
+            //1.创建Ajax核心对象
+            const xhr = new XMLHttpRequest();
+            //2.注册回调函数，readystate值改变时被调用。被调用多次
+            xhr.onreadystatechange = function(){
+                if(this.readyState == 4){
+                    if(this.status == 404){
+                        alert('您访问的资源不存在');
+                    }
+                    if(this.status >=200 && this.status<= 300){
+                        document.getElementById('result').innerHTML= this.responseText;
+                    }
+                }
+            }
+            //3.开启通道，只是浏览器和服务器连接，不发送请求
+            xhr.open('POST','http://127.0.0.1:8000/server2',true)
+            //4.发请求
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded') //设置请求头 模拟表单提交的关键 不能放在open之前，open之前还没有这个属性
+            xhr.send('username=mdx&usercode=666');
+        }
+    </script>
+</body>
+</html>
